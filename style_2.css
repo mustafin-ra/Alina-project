@@ -1,0 +1,298 @@
+
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Laila', serif;
+    background-color: #eee;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    flex-grow: 1;
+}
+
+.open{
+    display: flex !important;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-left: 50px;
+    min-height: 100px;
+}
+
+.nav{
+    display: flex;
+    width: 700px;
+    padding: 0 40px;
+}
+
+.nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper_3{
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span{
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color:  #B280BF;;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color:  #B280BF;;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+/* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
+
+   
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+
+.container{
+   max-width: 1200px;
+   font-family: 'Laila', serif;
+   margin: 0 80px 0 80px ;
+
+}
+.button_1 {
+    background-color: #B280BF;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    width: 180px;
+    height: 53px;
+    border-radius: 70px;
+    font-size: 16px;
+
+   }
+   .button_1:hover{
+    background-color: #a947c1;
+   }
+   .a{
+    
+       color: #B280BF;
+       text-decoration: none;
+       font-size: 20px;
+   }
+   
+   .cards-grid{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit,minmax(min(11.25rem, 100%),1fr));
+    grid-template-columns: repeat(3,360px);
+    grid-template-rows:repeat(4,174px);
+    justify-content: center;
+    margin: 0 auto;
+}
+.card-demo{
+    background-color: #D9D9D9;
+}
+.rectangle__title{
+    margin: 6px;
+    padding: 6px;
+    font-size: 24px;
+   }
+   .rectangle__text{
+    margin: 6px;
+    padding: 6px;
+    font-size: 16px;
+   }
+   .rectangle__price{
+    margin: 6px;
+    padding: 6px;
+    font-size: 22px;
+    font-family: 'Bad Script', cursive;
+   }
+   .button_2 {
+    float: right;
+    position: relative;
+    background-color: #B280BF;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    height: 43px;
+    border-radius: 70px;
+    margin: 0;
+    padding: 0;
+   }
+   .button_2:hover{
+    background-color: #a947c1;
+   }
+   .a_2{
+    color: #f1ecf2;
+    text-decoration: none;
+    font-size: 20px;
+   }
+   .button_3{
+    float: right;
+    position: relative;
+    background-color: #B280BF;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+    height: 43px;
+    border-radius: 70px;
+    margin: 0;
+    padding: 0;
+    margin-top: 85px;
+   }
+   .button_3:hover{
+    background-color: #a947c1;
+   }
+
+
+
+
+
+    .h{
+        margin: 45px 20px 45px 20px;
+        font-size: 18px;
+      font-family: 'Vollkorn', serif;;
+      letter-spacing: 11px;
+      padding: 0;
+    }
+    
+       .title{
+         font-family: 'Vollkorn', serif;;
+      letter-spacing: 1px;
+        color: #2E2121;
+        font-size: 16px;
+        margin: 0 auto;
+       }
+
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    label.error{
+        display: none!important;
+    }
+
+
+    form {
+        border: 1px solid #c3c3c3;
+        padding: 15px;
+        width: 350px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    form input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid #c3c3c3;
+        background-color: #F8ECEC;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+    }
+    .form input:focus {
+    outline: none;
+    border-color: beige;
+    box-shadow: 0 0 5px rgba(255, 127, 80, 3) ;
+   }
+    form input.error{
+        border-color:red;
+    }
+
+
+    form button {
+        color: white;
+        background-color:#B280BF;
+        height: 50px;
+        width: 100%;
+        cursor: pointer;
+        border: #B280BF;
+    }
+    form button:hover{
+        background-color: #a947c1;
+       }
+       .footer{
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+       
+        left: 0;
+        bottom: 0;
+        width: 100%;
+       margin-top: 35px;
+        
+       }
+       .footer__left{
+        margin-left: 10%;
+       }
+       .footer__right{
+        margin-right: 10%;
+       }
+       .link{
+        text-decoration: none;
+        font-size: 16px;
+        color: #a947c1;
+       }
+       

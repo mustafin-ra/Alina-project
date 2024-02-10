@@ -1,0 +1,132 @@
+@media (width<1270px){
+
+}
+@media (width<1030px){
+    .menu__list{
+        font-size: 16px;
+    }
+    .h{
+        font-size: 16px;
+    }
+    .burger { display: flex }
+
+    .nav{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 50px 40px;
+        background-color: #B280BF;
+        animation: burgerAnimation 0.4s;
+    }
+    .a{
+    
+        color: #e6e2e7;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    .nav ul{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .contact__img{
+        width: 400px;
+        height: 450px;
+    }
+    
+    .contact__text{
+        margin-left: 10%;
+    }
+    .link{
+        font-size: 12px;
+    }
+}
+
+@media (width<750px){
+    .contact__img{
+        width: 300px;
+        height: 360px;
+        margin: 5%;
+    }
+    .text__number{
+        font-size: 12px;
+    }
+    .text__telegram_1{
+        font-size: 12px;
+    }
+    https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.freepik.com%2Ffree-psd%2Frealistic-shiny-3d-round-button-with-telegram-icon_43149444.htm&psig=AOvVaw3hnUmeKCjMBIpR-Z2HMFoU&ust=1707470844413000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCY6dq2m4QDFQAAAAAdAAAAABAE
+    .text__number{
+        font-size: 12px;
+    }
+    .button_4{
+        width: 130px;
+        height: 32px;
+    }
+   
+   
+       .number{
+ 
+        font-size:14px ;
+    }
+    .contact__text{
+        margin: 2 0 0 25px;
+    }
+    .container{
+        margin: 0 auto;
+    }
+    .link{
+        font-size: 10px;
+    }
+}
+
+@media (width<630px){
+    .container{
+        display: block;
+        margin: 0 20px 0 20px;
+    }
+    .button_1{
+        width: 130px;
+        height: 43px;
+    }
+    .a_2{
+        color: #f1ecf2;
+        text-decoration: none;
+        font-size: 16px;
+       }
+       .h{
+        font-size: 16px;
+        margin-left: -40px;
+        align-items: center;
+       }
+       .contact__img{
+        width: 280px;
+        height: 330px;
+        align-items: center;
+    }
+  
+    .link{
+        font-size: 8px;
+    }
+    .button_4{
+        display: none;
+    }
+    .img_tel{
+        display: block;
+       
+    }
+    .a_2{
+        font-size: 16px;
+       }
+       
+   
+    .header{
+        margin: 0 auto;
+    }
+    
+
+}
