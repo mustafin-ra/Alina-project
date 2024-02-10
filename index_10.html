@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link href="https://fonts.googleapis.com/css2?family=Laila&display=swap" rel="stylesheet">
+       
+        <style>
+        * {box-sizing: border-box}
+        .mySlides1, .mySlides2 {display: none}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 440px;
+          max-height: 480px;
+          position: relative;
+      
+          
+        }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          margin-left: 390px;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a grey background color */
+        .prev:hover, .next:hover {
+          background-color: #f1f1f1;
+          color: black;
+        }
+        .container{
+            max-width: 1200px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            margin-top: 45px;
+        }
+        .slideshow-container{
+           margin: 15px 90px 50px 90px;
+           
+        }
+       
+        body {
+    width: 100%;
+    margin: 0; 
+    font-family: 'Laila', serif;
+    background-color: #eee;
+    font-size: 18px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    flex-grow: 1;
+}
+
+.open{
+    display: flex !important;
+}
+
+.header{
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    padding: 0 40px;
+    margin-left: 50px;
+}
+
+.nav{
+    display: flex;
+    width: 700px;
+    padding: 0 40px;
+}
+
+.nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper_3{
+    display: flex;
+    justify-content: space-between;
+}
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+}
+
+.burger span{
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color:  #B280BF;;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color:  #B280BF;;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+/* При разрешении экрана 900px и ниже, выводим на экран иконку бургера */
+
+   
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+
+.button_1 {
+    background-color: #B280BF;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    width: 180px;
+    height: 53px;
+    border-radius: 70px;
+    font-size: 16px;
+
+   }
+   .button_1:hover{
+    background-color: #a947c1;
+   }
+   .a{
+    
+       color: #B280BF;
+       text-decoration: none;
+       font-size: 20px;
+   }
+   .a_2{
+    color: #f1ecf2;
+    text-decoration: none;
+    font-size: 20px;
+   }
+   .text {
+  color: #B280BF;
+  font-size: 28px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -165px;
+  width: 100%;
+  text-align: center;
+  background-color: #f2f2f2;
+  margin-top: 10px;
+  font-family: 'Laila';
+
+}
+.zag{
+  font-size: 16px;
+  justify-content: center;
+ margin-bottom: 20px;
+  text-align: center;;
+  font-family: 'Vollkorn', serif;;
+  letter-spacing: 11px;
+}
+.link{
+    text-decoration: none;
+    font-size: 16px;
+    color: #a947c1;
+   }
+   .link{
+    text-decoration: none;
+    font-size: 16px;
+    color: #a947c1;
+   }
+   
+   
+   .footer{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+  margin-top: 40px;
+   
+    
+   }
+   .footer__left{
+    margin-left: 10%;
+   }
+   .footer__right{
+    margin-right: 10%;
+   }
+   .info{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 180px;
+   }
+   .li{
+    text-decoration: none;
+    color: #a947c1;
+   }
+
+        </style>
+        </head>
+        <body class="body">
+          
+            <header class="header">
+
+                <!-- Меню сайта -->
+                <nav class="nav">
+                    <ul>
+                        <li><a class="a" href="#">"#index_n1.html"</a></li>
+                        <li><a class="a" href="#index_2.html">Расписание и Абонементы</a></li>
+                        <li><a class="a" href="#index_4.html">Контакты</a></li>
+                    </ul>
+                </nav>
+            
+                <!-- Иконка бургерменю -->
+                <div class="burger">
+                    <span></span>
+                </div>
+                <div class="header__button">
+            <button class="button_1">
+                <a class="a_2" href="https://t.me/LEVELNN_bot">присоединяйся</a>
+            </button></div>
+            </header>
+        
+        <div class="container">
+         
+        <div class="slideshow-container"> 
+          <h1 class="zag">НАШИ НАПРАВЛЕНИЯ</h1>
+          <div class="mySlides1">
+            
+            <img class="y" src="./picture/s_2.jpg" style="width:440px" height="595px">
+            <div class="text"><a  class="li" href="#h3">Шпагат с нуля</a></div>
+          </div>
+        
+          <div class="mySlides1">
+            
+            <img  class="y" src="./picture/s_1.jpg" style="width:440px" height="595px">
+            <div class="text"><a class="li" href="#h4">Aeroyoga</a>
+             
+              </div>
+          </div>
+       
+          <div class="mySlides1">
+            <img class="y" src="./picture/s_3.jpg" style="width:440px" height="595px">
+            <div class="text"> <a  class="li" href="#h5">Pole Dance</a>
+
+            </div>
+          </div>
+          <div  class="mySlides1">
+            <img  class="y" src="./picture/s_4.jpg" style="width:440px" height="595px">
+            <div class="text"> <a class="li" href="#h6">Aerostretching</a>
+              </div>
+          </div>
+          <div class="mySlides1">
+            <img class="y" src="./picture/s_5.jpg" style="width:440px" height="595px">
+            <div class="text"><a class="li" href="#h7">Спина+МФР</a>
+              </div>
+          </div>
+        
+          <a class="prev" onclick="plusSlides(-1, 0)">❮</a>
+          <a class="next" onclick="plusSlides(1, 0)">❯</a>
+        </div>
+        
+        <div class="slideshow-container"> 
+          <h2 class="zag">  НАША КОМАНДА</h2>
+          <div class="mySlides2">
+            <img class="y" src="./picture/t_1.jpg" style="width:440px" height="595px">
+            <div class="text">Даша</div>
+          </div>
+        
+          <div class="mySlides2">
+            <img class="y" src="./picture/t_2.jpg" style="width:440px" height="595px">
+            <div class="text">Кристина</div>
+          </div>
+        
+          <div class="mySlides2">
+            <img class="y" src="./picture/t_3.jpg "style="width:440px" height="595px">
+            <div class="text">Алена</div>
+          </div>
+          <div class="mySlides2">
+            <img class="y" src="./picture/t_4.jpg "style="width:440px" height="595px">
+            <div class="text">Полина</div>
+          </div>
+          <div class="mySlides2">
+            <img class="y" src="./picture/t_5.jpg "style="width:440px" height="595px">
+            <div class="text">Лена</div>
+          </div>
+        
+          <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+          <a class="next" onclick="plusSlides(1, 1)">❯</a>
+        </div>
+        </div>
+        <div class="info">
+          <article id="h3">Шпагат с нуля.
+          На шпагат сесть мы поможем с помощью уникальной методики, в которую включены элементы йоги, классической хореографии, пилатеса. Это все осуществимо и подходить для людей любого возраста, независимо от уровня вашей физической подготовки. Никакого перенапряжения или травм! Все будет постепенно и приятно! <br></article>
+
+          Pole Dance.
+          <article id="h4">В студииpole dance для начинающих и продвинутых на тренировках акцент делается на изучение акробатических элементов на пилоне, около пилона, круток и срывов. Соотношение элементов и танца 80 к 20. 
+
+          Регулярные занятия пол дэнсом позволят вам расслабиться и нервное напряжение; стать выносливее, грациознее, пластичнее и увереннее в себе. Кроме того, танец пол дэнс экзотик улучшит растяжку и координацию, а также даст хорошую нагрузку на все группы мышц.<br></article>
+
+          <article id="h5">Aerostretching.Тренировки аэрострейчинга способствуют улучшению осанки, восстановлению скелетно-мышечной системы.Тренировки в гамаках активизируют работу мозга, налаживают совместную работу нервной системы и реакций различных групп мышц.Стретчинг в воздухе способствует удлинению и растяжению мышц, развивает гибкость. <br></article>
+
+          <article id="h6">Спина+МФР.Миофасциальный релиз - это мануальная терапия, техника самомассажа, которая используется в фитнесе для расслабления мышц путем надавливания и растягивания тканей в сочетании с правильным дыханием. Основная задача - максимальное мышечное расслабление. Дополнительно к самомассажу в программе тренировки идет выполнение силовых упражнений с весом собственного тела, направленных на укрепление мышц шеи, поясницы и всей спины вцелом. <br></article>
+
+          <article id="h7">Aeroyoga. Аэройога или антигравити-йога, или по-простому йога в гамаках – это физическая тренировка, сочетающая в себе растяжку, йогу, балет, пилатес, акробатику и калланетику. 
+          Благодаря необычным условиям тренировки, аэройога позволяет отключиться от мыслей и сосредоточиться на телесных ощущениях. Работа с гамаком вместе с силой гравитации помогают вытянуть тело и растянуть мышцы.</article>
+
+
+        </div>
+        <footer class="footer">
+          <div class="footer__left">
+              <p>
+                  <a class="link" href="#">Контакты</a></p>
+              <p>
+                  <a class="link" href="#">О нас</a> </p>
+          </div>
+          <div class="footer__right">
+              <p >
+                  <a class="link" href="#">Расписание и абонементы</a></p>
+              <p>
+                  <a class="link" href="#">Политика конфиденциальности</a>
+              </p>
+          </div>
+         </footer>
+        <script>
+        var slideIndex = [1,1];
+        var slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+        
+        function plusSlides(n, no) {
+          showSlides(slideIndex[no] += n, no);
+        }
+        
+        function showSlides(n, no) {
+          var i;
+          var x = document.getElementsByClassName(slideId[no]);
+          if (n > x.length) {slideIndex[no] = 1}    
+          if (n < 1) {slideIndex[no] = x.length}
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          x[slideIndex[no]-1].style.display = "block";  
+        }
+        </script>
+        
+        <script>
+          document.querySelector('.burger').addEventListener('click', function() {
+              this.classList.toggle('active');
+              document.querySelector('.nav').classList.toggle('open');
+          })
+      </script>
+         
+    <title>О НАС</title>
+    <link rel="stylesheet" href="./media/media_10.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Laila&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+</body>
+</html>
